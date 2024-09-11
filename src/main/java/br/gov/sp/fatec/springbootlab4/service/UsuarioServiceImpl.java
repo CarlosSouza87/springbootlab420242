@@ -6,6 +6,8 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
@@ -26,14 +28,18 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     private final AnotacaoRepository anotacaoRepo;
 
-    public UsuarioServiceImpl(UsuarioRepository repo, AutorizacaoRepository autRepo, AnotacaoRepository anotacaoRepo) {
+    private final PasswordEncoder encoder;
+
+    public UsuarioServiceImpl(UsuarioRepository repo, AutorizacaoRepository autRepo, AnotacaoRepository anotacaoRepo, PasswordEncoder encoder) {
         this.repo = repo;
         this.autRepo = autRepo;
         this.anotacaoRepo = anotacaoRepo;
+        this.encoder = encoder;
     }
 
     @Transactional
     @Override
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public Usuario novoUsuario(Usuario usuario) {
         if(usuario == null ||
                 usuario.getNome() == null ||
@@ -58,6 +64,7 @@ public class UsuarioServiceImpl implements UsuarioService {
             }
             usuario.setAutorizacoes(autorizacoes);
         }
+        usuario.setSenha(encoder.encode(usuario.getSenha()));
         usuario = repo.save(usuario);
         if(usuario.getAnotacoes() != null && !usuario.getAnotacoes().isEmpty()) {
             for(Anotacao anotacao: usuario.getAnotacoes()) {
@@ -83,6 +90,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
+    @PreAuthorize("isAuthenticated()")
     public Usuario buscarPeloId(Long id) {
         Optional<Usuario> usuarioOp = repo.findById(id);
         if(usuarioOp.isEmpty()) {
