@@ -1,0 +1,69 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< br.gov.sp.fatec:springbootlab4 >-------------------
+[INFO] Building springbootlab4 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ springbootlab4 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ springbootlab4 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ springbootlab4 ---
+[INFO] skip non existing resourceDirectory /workspace/springbootlab420242/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ springbootlab4 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ springbootlab4 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.gov.sp.fatec.springbootlab4.Springbootlab4ApplicationTests
+23:41:13.373 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.gov.sp.fatec.springbootlab4.Springbootlab4ApplicationTests]: Springbootlab4ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:41:13.456 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.gov.sp.fatec.springbootlab4.Springbootlab4Application for test class br.gov.sp.fatec.springbootlab4.Springbootlab4ApplicationTests
+23:41:13.579 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-14T23:41:13.786Z  INFO 6385 --- [springbootlab4] [           main] b.g.s.f.s.Springbootlab4ApplicationTests : Starting Springbootlab4ApplicationTests using Java 17.0.8 with PID 6385 (started by gitpod in /workspace/springbootlab420242)
+2024-08-14T23:41:13.787Z  INFO 6385 --- [springbootlab4] [           main] b.g.s.f.s.Springbootlab4ApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-08-14T23:41:14.263Z  INFO 6385 --- [springbootlab4] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-14T23:41:14.299Z  INFO 6385 --- [springbootlab4] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2024-08-14T23:41:14.675Z  INFO 6385 --- [springbootlab4] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-14T23:41:14.709Z  INFO 6385 --- [springbootlab4] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-14T23:41:14.734Z  INFO 6385 --- [springbootlab4] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-14T23:41:14.955Z  INFO 6385 --- [springbootlab4] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-14T23:41:14.975Z  INFO 6385 --- [springbootlab4] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-14T23:41:15.305Z  INFO 6385 --- [springbootlab4] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@365bfc5f
+2024-08-14T23:41:15.307Z  INFO 6385 --- [springbootlab4] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-14T23:41:15.357Z  WARN 6385 --- [springbootlab4] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-14T23:41:15.358Z  WARN 6385 --- [springbootlab4] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-14T23:41:16.025Z  INFO 6385 --- [springbootlab4] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-14T23:41:16.059Z  INFO 6385 --- [springbootlab4] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-14T23:41:16.195Z  WARN 6385 --- [springbootlab4] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-14T23:41:16.720Z  INFO 6385 --- [springbootlab4] [           main] b.g.s.f.s.Springbootlab4ApplicationTests : Started Springbootlab4ApplicationTests in 3.15 seconds (process running for 3.901)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.921 s -- in br.gov.sp.fatec.springbootlab4.Springbootlab4ApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.613 s
+[INFO] Finished at: 2024-08-14T23:41:17Z
+[INFO] ------------------------------------------------------------------------
