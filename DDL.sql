@@ -97,3 +97,17 @@ create table pro_produto (
 insert into pro_produto (pro_nome, pro_data_cadastro, pro_data_hora_ultima_compra, pro_lote)
   values ('Sabonete', '2024-06-12', current_timestamp(), 234561),
     ('Vassoura', '2024-06-10', '2024-07-21 10:00:53', 444333);
+
+create table cha_chamado (
+  cha_id bigint primary key auto_increment,
+  cha_titulo varchar(100) not null,
+  cha_descricao varchar(100),
+  cha_data_hora_cadastro datetime not null,
+  cha_data_hora_finalizacao datetime,
+  cha_estimativa float
+);
+
+insert into cha_chamado (cha_titulo, cha_data_hora_cadastro, cha_data_hora_finalizacao, cha_estimativa)
+  values ('Login não funciona', '2024-06-12 09:30:17', current_timestamp(), 4.6),
+    ('Erro na prova', current_timestamp(), null, null),
+    ('Erro SQL', current_timestamp(), null, 3.5);
